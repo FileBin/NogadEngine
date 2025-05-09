@@ -18,6 +18,8 @@ mkShell rec {
         zlib
         vulkan-loader
         jq
+        meson
+        mesonlsp
     ];
     packages = [
         (vscode-with-extensions.override {
@@ -28,6 +30,7 @@ mkShell rec {
                 tal7aouy.icons
                 jnoortheen.nix-ide
                 wmaurer.change-case
+                mesonbuild.mesonbuild
             ] ++  vscode-utils.extensionsFromVscodeMarketplace [
                 {
                     name = "vscode-s-quirrel";
@@ -40,6 +43,18 @@ mkShell rec {
                     publisher = "profelis";
                     version = "1.1.44";
                     hash = "sha256-GqQDk12FMZih3HBl7pTNte9vhvfzQERV62NmWUlTSwU=";
+                }
+                {
+                    name = "blk";
+                    publisher = "eguskov";
+                    version = "0.0.2";
+                    hash = "sha256-m56gP+L2acRD0wUrc/xaaN//uvHktB1Aft2vu5KWXro=";
+                }
+                {
+                    name = "blktool";
+                    publisher = "eguskov";
+                    version = "0.1.20";
+                    hash = "sha256-fo/lGiUujGiHClp1Q+fM8MuuRQJp5mte9riFH7D0EvU=";
                 }
             ];
         })

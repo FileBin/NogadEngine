@@ -1,10 +1,5 @@
 // Copyright (C) Gaijin Games KFT.  All rights reserved.
 
-#if _TARGET_PC_WIN
-#define WIN32_LEAN_AND_MEAN
-#include <windows.h>
-#endif
-
 #include <util/dag_globDef.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -44,10 +39,6 @@
 
 #include <drv/hid/dag_hiGlobals.h>
 #include <drv/hid/dag_hiKeybIds.h>
-
-#if USE_MEQON_PHYSICS
-// #include <meq_remotedebug.h>
-#endif
 
 #if USE_TRUEAXIS_PHYSICS
 #include <Physics/PhysicsRender.h>
