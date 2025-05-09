@@ -16,3 +16,5 @@
 *.das.inl
 *.dshl.log
 ShaderLog-*
+.cache
+compile_commands.json
