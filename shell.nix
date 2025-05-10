@@ -50,7 +50,7 @@ let
         Description: Electronic Arts Standard Template Library
         Version: ${version}
         Libs: -L\''${libdir} -lEASTL
-        Cflags: -I\''${includedir}
+        Cflags: -I\''${includedir} -I${EABase.out}/include
         EOF
       '';
     }) {};
@@ -122,7 +122,6 @@ mkShell rec {
         })
     ];
     shellHook = ''
-        export PATH=:"$PATH:$PWD/../DagorDevtools"
         export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath buildInputs}:$LD_LIBRARY_PATH"
     '';
 }

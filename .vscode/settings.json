@@ -1,4 +1,6 @@
 {
     "C_Cpp.intelliSenseEngine": "disabled",
-    "C_Cpp.default.configurationProvider": "mesonbuild.mesonbuild",    
+    "C_Cpp.default.configurationProvider": "mesonbuild.mesonbuild",
+    "C_Cpp.default.compileCommands": "/home/filebin/projects/DagorEngine/builddir/compile_commands.json",
+    
 }

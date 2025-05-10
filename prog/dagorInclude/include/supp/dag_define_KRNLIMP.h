@@ -1,4 +1,4 @@
-#if _TARGET_STATIC_LIB
+#if _TARGET_STATIC_LIB == 0
 #define KRNLIMP
 #elif _TARGET_PC_WIN
 #ifdef __B_KERNEL_LIB
