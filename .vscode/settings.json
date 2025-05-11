@@ -8,6 +8,7 @@
     "C_Cpp.default.configurationProvider": "mesonbuild.mesonbuild",
     "clangd.arguments": [],
     "clangd.fallbackFlags": [],
+    "editor.detectIndentation": false,
     "[nix]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 2

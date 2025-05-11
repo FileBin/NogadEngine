@@ -5,7 +5,7 @@
 #include <daECS/core/componentTypes.h>
 #include <daECS/core/coreEvents.h>
 #include <daECS/core/entityManager.h>
-#include <hash/mum_hash.h>
+#include <mumhash/mum.h>
 #include <startup/dag_globalSettings.h>
 #include <main/appProfile.h>
 

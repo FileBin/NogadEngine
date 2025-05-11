@@ -4,10 +4,13 @@ project('NogadEngine', 'cpp',
         default_options : ['cpp_std=c++17'])
 
 subprojects = [
+  'packages',
   'prog/config',
   'prog/dagorInclude',
   'prog/engine/sharedInclude',
+  'prog/1stPartyLibs/dag',
   'prog/engine/osApiWrappers',
+  'prog/engine/math',
 ]
 
 foreach sp : subprojects

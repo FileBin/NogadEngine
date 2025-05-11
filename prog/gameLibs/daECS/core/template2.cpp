@@ -5,7 +5,7 @@
 #include <daECS/core/componentType.h>
 #include <debug/dag_assert.h>
 #include <debug/dag_debug.h>
-#include <hash/mum_hash.h>
+#include <mumhash/mum.h>
 #include <string.h>
 #include <EASTL/algorithm.h>
 #include <EASTL/vector_set.h>

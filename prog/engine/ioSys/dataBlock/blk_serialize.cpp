@@ -7,7 +7,7 @@
 #include <math/dag_Point4.h>
 #include <math/dag_TMatrix.h>
 #include <math/dag_e3dColor.h>
-#include <hash/mum_hash.h>
+#include <mumhash/mum.h>
 #include <ioSys/dag_memIo.h>
 #include "blk_iterate.h"
 #include <util/le2be.h>

@@ -8,7 +8,7 @@
 #include <math/dag_Point3.h>
 #include <generic/dag_tabUtils.h>
 #include <EASTL/hash_map.h>
-#include <hash/mum_hash.h>
+#include <mumhash/mum.h>
 // #include <debug/dag_debug.h>
 
 // #define ENABLE_LOG_CONNECT_MESHES

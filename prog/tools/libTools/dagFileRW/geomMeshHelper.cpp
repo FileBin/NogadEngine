@@ -4,7 +4,7 @@
 #include <ioSys/dag_dataBlock.h>
 #include <math/dag_mesh.h>
 #include <EASTL/hash_set.h>
-#include <hash/mum_hash.h>
+#include <mumhash/mum.h>
 
 GeomMeshHelper::GeomMeshHelper(IMemAlloc *mem) : verts(mem), faces(mem), edges(mem) {}
 

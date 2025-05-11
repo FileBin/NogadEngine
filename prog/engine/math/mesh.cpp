@@ -17,7 +17,7 @@
 #include <util/dag_bitArray.h>
 #include <util/dag_stlqsort.h>
 #include <EASTL/hash_map.h>
-#include <hash/mum_hash.h>
+#include <mumhash/mum.h>
 
 #include <debug/dag_debug.h>
 

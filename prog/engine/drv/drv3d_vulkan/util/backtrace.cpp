@@ -6,7 +6,7 @@
 #include <util/dag_string.h>
 #include <EASTL/hash_map.h>
 #include <EASTL/vector.h>
-#include <hash/mum_hash.h>
+#include <mumhash/mum.h>
 
 struct BackTraceEntry
 {
