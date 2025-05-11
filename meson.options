@@ -1,0 +1,4 @@
+option('use_exceptions', type : 'boolean', value : true)
+option('use_rtti', type : 'boolean', value : true)
+option('use_stack_protection', type : 'boolean', value : true)
+option('debug_level', type : 'integer', value : 1)

@@ -51,7 +51,7 @@ endif
 message('Auto-detected SSE flag:', sse_flag)
 
 # Конфигурация компилятора
-common_c_args = [
+common_flags = [
   '-pipe',
   '-c',
   '@0@'.format(get_variable('sse_flag')),  # Динамический флаг (avx/sse4.2 и т.д.)
@@ -71,7 +71,7 @@ common_c_args = [
   '-ffast-math',
   '-ffinite-math-only',
   '-fpermissive',
-  '-mno-recip',
+
   '-minline-all-stringops',
   '-Wuninitialized',
   '-Werror=uninitialized',
@@ -95,12 +95,50 @@ common_c_args = [
   '-D__LINUX__=64',
   '-D_TARGET_SIMD_SSE=@0@'.format(sse_def),
   '-Di_strlen=(int)strlen',
-  '-D__STDC_CONSTANT_MACROS'
+  '-D__STDC_CONSTANT_MACROS',
+  '-DDAGOR_DBGLEVEL=@0@'.format(get_option('debug_level')),
 ]
 
-# Экспортируем как dependency
-common_flags_dep = declare_dependency(
-  compile_args: common_c_args,
-  # Для C++ проектов добавьте:
-  # compile_args: common_c_args + ['-std=c++17']
+cpp_flags = [
+  '-Wno-invalid-offsetof',
+  '-include', 'memory/dag_memBase.h'
+]
+
+if compiler.get_id() == 'gcc'
+  common_flags += '-mno-recip'
+  cpp_flags += '-fconserve-space'
+endif
+
+if get_option('use_exceptions')
+    cpp_flags += [ '-fexceptions', '-DDAGOR_EXCEPTIONS_ENABLED=1']
+else
+    cpp_flags += '-fno-exceptions'
+endif
+
+if get_option('use_rtti')
+  cpp_flags += '-fno-rtti'
+else
+  cpp_flags += '-frtti'
+endif
+
+if get_option('use_stack_protection')
+    cpp_flags += '-fstack-protector'
+else
+    cpp_flags += '-fno-stack-protector'
+endif
+
+add_global_arguments(common_flags + cpp_flags, language: 'cpp')
+
+static_library_flags = [
+  '-D_TARGET_STATIC_LIB=1',
+]
+
+engine_library_flags = static_library_flags + [ '-D__B_KERNEL_LIB' ]
+
+static_library_dep = declare_dependency(
+  compile_args: static_library_flags,
+)
+
+engine_library_dep = declare_dependency(
+  compile_args: engine_library_flags,
 )

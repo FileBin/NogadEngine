@@ -1,6 +1,12 @@
 {
     "C_Cpp.intelliSenseEngine": "disabled",
-    "C_Cpp.default.configurationProvider": "mesonbuild.mesonbuild",
+    "mesonbuild.configureOptions": [
+        "--buildtype", "debug",
+        "--debug"
+    ],
     "C_Cpp.default.compileCommands": "/home/filebin/projects/DagorEngine/builddir/compile_commands.json",
-    
+    "C_Cpp.default.configurationProvider": "mesonbuild.mesonbuild",
+    "clangd.arguments": [],
+    "clangd.fallbackFlags": [],
+
 }

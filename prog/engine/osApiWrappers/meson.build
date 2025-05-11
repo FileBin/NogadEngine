@@ -42,15 +42,5 @@ sources = files(
 
 static_library('osApiWrappers',
             sources : sources,
-            cpp_args: [ 
-                '-D_TARGET_STATIC_LIB=1',
-                '-D__B_KERNEL_LIB',
-                '-g',
-                '-fstack-protector',
-                '-include', 'memory/dag_memBase.h',
-                '-Wno-invalid-offsetof',
-                '-fexceptions',
-                '-DDAGOR_EXCEPTIONS_ENABLED=1',
-                '-fno-rtti',
-            ],
-            dependencies: [ dagorInclude, engineSharedInclude, stl, common_flags_dep ])
+            cpp_args: '-v',
+            dependencies: [ dagorInclude, engineSharedInclude, stl, engine_library_dep ])
