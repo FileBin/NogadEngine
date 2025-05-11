@@ -70,7 +70,6 @@ common_flags = [
   '-fno-omit-frame-pointer',
   '-ffast-math',
   '-ffinite-math-only',
-  '-fpermissive',
 
   '-minline-all-stringops',
   '-Wuninitialized',
@@ -100,6 +99,7 @@ common_flags = [
 ]
 
 cpp_flags = [
+  '-fpermissive',
   '-Wno-invalid-offsetof',
   '-include', 'memory/dag_memBase.h'
 ]
@@ -107,6 +107,10 @@ cpp_flags = [
 if compiler.get_id() == 'gcc'
   common_flags += '-mno-recip'
   cpp_flags += '-fconserve-space'
+endif
+
+if host_machine.system() == 'linux'
+  #TODO: move here linux options
 endif
 
 if get_option('use_exceptions')
@@ -128,6 +132,7 @@ else
 endif
 
 add_global_arguments(common_flags + cpp_flags, language: 'cpp')
+add_global_arguments(common_flags, language: 'c')
 
 static_library_flags = [
   '-D_TARGET_STATIC_LIB=1',

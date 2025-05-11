@@ -1,18 +1,17 @@
-stl = dependency('eastl')
-
 sources = files(
   #linux sources
   'linux/linuxClipboard.cpp',
+
+  #linux android sources
   'linux/linuxSetTitle.cpp',
+  'convertUTF.cpp',
   'posix/posixAIOAsyncRead.cpp',
+  
   'basePath.cpp',
   'basePathMgr.cpp',
-  'convertUTF.cpp',
   'cpuFeatures.cpp',
   'cpuJobs.cpp',
   'critsec.cpp',
-
-  #linux android sources
   'dbgStr.cpp',
   'dbgStrFmt.cpp',
   'directoryService.cpp',
