@@ -42,5 +42,4 @@ sources = files(
 
 static_library('osApiWrappers',
             sources : sources,
-            cpp_args: '-v',
             dependencies: [ dagorInclude, engineSharedInclude, stl, engine_library_dep ])
