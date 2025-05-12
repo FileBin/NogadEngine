@@ -14,6 +14,7 @@
 #include <debug/dag_assert.h>
 #include <util/dag_hashedKeyMap.h>
 #include <util/dag_nameHashers.h>
+#include <wyhash/wyhash.h>
 
 template <bool ignore_case, typename Hasher = DefaultOAHasher<ignore_case>>
 struct OAHashNameMap
@@ -197,7 +198,7 @@ struct FixedCapacityOAHashNameMap
   uint32_t stringsDataSize;
   static inline hash_t string_hash(const char *s, size_t len)
   {
-    hash_t ret = (hash_t)wyhash(s, len, 1);
+    hash_t ret = (hash_t)wyhash(s, len, 1, _wyp);
     return ret ? ret : 1;
   }
   static inline hash_t string_hash(const char *s) { return string_hash(s, strlen(s)); }

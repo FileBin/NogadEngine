@@ -11,7 +11,7 @@
 #include <math/dag_e3dColor.h>
 #include <math/dag_TMatrix.h>
 #include <ska_hash_map/flat_hash_map2.hpp>
-#include <hash/wyhash.h>
+#include <wyhash/wyhash.h>
 #include <debug/dag_debug3dStates.h>
 #include <util/dag_simpleString.h>
 

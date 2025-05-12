@@ -30,7 +30,7 @@ sources = files(
   'wooray3d.cpp',
 )
 
-static_library(
+engine_math = static_library(
   'math',
   sources: sources,
   dependencies: [

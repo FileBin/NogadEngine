@@ -1,7 +1,7 @@
 // Copyright (C) Gaijin Games KFT.  All rights reserved.
 #pragma once
 
-#include <hash/wyhash.h>
+#include <wyhash/wyhash.h>
 
 namespace sndsys
 {

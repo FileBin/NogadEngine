@@ -6,7 +6,7 @@
 
 #include <util/dag_stdint.h>
 #include <util/dag_hash.h>
-#include <hash/wyhash.h>
+#include <wyhash/wyhash.h>
 #include <osApiWrappers/dag_localConv.h>
 
 template <bool ignore_case, typename hash_t = uint32_t>
@@ -28,7 +28,7 @@ public:
     }
     else
     {
-      ret = (hash_t)wyhash(s, len, 1);
+      ret = (hash_t)wyhash(s, len, 1, _wyp);
     }
     return ret ? ret : (hash_t(1) << (sizeof(hash_t) * 8 - 1));
   }

@@ -17,6 +17,7 @@
 
 #include <rtm/math.h>
 #include <acl/core/compressed_tracks.h>
+#include <extensions/acl/compressed_tracks.h>
 #include <acl/decompression/decompress.h>
 
 template <>
@@ -446,19 +447,18 @@ inline int AnimV20::AnimDataChan::keyTimeLast() const
   return AnimV20Math::seconds_to_ticks(animTracks->get_duration());
 }
 
-
 inline bool AnimV20::PrsAnimNodeRef::hasAnimation() const
 {
   if (!anim)
     return false;
-  return anim->is_animated(trackId.index());
+  return acl_compressed_tracks_is_animated(anim, trackId.index());
 }
 
 inline int AnimV20::PrsAnimNodeRef::keyTimeLast() const
 {
   if (!anim)
     return 0;
-  if (!anim->is_animated(trackId.index()))
+  if (!acl_compressed_tracks_is_animated(anim, trackId.index()))
     return 0;
   return AnimV20Math::seconds_to_ticks(anim->get_duration());
 }
@@ -467,7 +467,7 @@ inline float AnimV20::PrsAnimNodeRef::getDuration() const
 {
   if (!anim)
     return 0;
-  if (!anim->is_animated(trackId.index()))
+  if (!acl_compressed_tracks_is_animated(anim, trackId.index()))
     return 0;
   return anim->get_duration();
 }

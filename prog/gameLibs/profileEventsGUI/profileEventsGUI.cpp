@@ -2,7 +2,7 @@
 
 #include <profileEventsGUI/profileEventsGUI.h>
 #include <perfMon/dag_statDrv.h>
-#include <hash/wyhash.h>
+#include <wyhash/wyhash.h>
 #include <util/dag_console.h>
 #include <gui/dag_stdGuiRender.h>
 #include <dag/dag_vectorSet.h>

@@ -6,7 +6,7 @@
 
 #include <math/dag_adjpow2.h>
 #include <EASTL/unique_ptr.h>
-#include <hash/wyhash.h>
+#include <wyhash/wyhash.h>
 #include <debug/dag_assert.h>
 
 // this is simple Open Addressing hash table with separated (hashed, integral type) keys and values map. Keys==EmptyKey Key(), are

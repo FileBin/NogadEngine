@@ -50,7 +50,7 @@ sources = files(
   'wndProcComponent.cpp',
 )
 
-static_library(
+engine_osApiWrappers = static_library(
   'osApiWrappers',
   sources: sources,
   dependencies: [

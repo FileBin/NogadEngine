@@ -8,7 +8,7 @@
 #include <EASTL/vector.h>
 #include <EASTL/array.h>
 #include <EASTL/string.h>
-#include <hash/wyhash.h>
+#include <wyhash/wyhash.h>
 #include <util/dag_generationRefId.h>
 #include <generic/dag_span.h>
 #include <drv/3d/dag_resId.h>

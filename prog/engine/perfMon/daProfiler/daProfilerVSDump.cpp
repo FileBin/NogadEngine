@@ -11,7 +11,7 @@
 #include "stl/daProfilerStl.h"
 #include "dumpLayer.h"
 #include <time.h>
-#include <hash/wyhash.h>
+#include <wyhash/wyhash.h>
 
 // fileserver / another dump saving server
 // game send dumps to servers, servers process them
