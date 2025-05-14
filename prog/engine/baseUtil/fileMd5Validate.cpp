@@ -4,7 +4,7 @@
 #include <ioSys/dag_fileIo.h>
 #include <osApiWrappers/dag_files.h>
 #include <util/dag_strUtil.h>
-#include <hash/md5.h>
+#include <md5/md5.h>
 
 static constexpr int HASH_SZ = 16;
 static bool getFileHash(const char *fname, unsigned char out_hash[HASH_SZ])

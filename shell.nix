@@ -3,6 +3,7 @@ let
   acl = pkgs.callPackage ./packages/nfrechette-acl.nix { };
   rtm = pkgs.callPackage ./packages/nfrechette-rtm.nix { };
   EASTL = pkgs.callPackage ./packages/eastl.nix { };
+  md5 = pkgs.callPackage ./packages/hash/md5.nix { };
   mumhash = pkgs.callPackage ./packages/hash/mumhash.nix { };
   murmurhash = pkgs.callPackage ./packages/hash/murmurhash.nix { };
   wyhash = pkgs.callPackage ./packages/hash/wyhash.nix { };
@@ -40,6 +41,7 @@ mkShell rec {
     mumhash
     murmurhash
     wyhash
+    md5
   ];
 
   packages = [

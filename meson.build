@@ -17,6 +17,7 @@ subprojects = [
   'prog/engine/workCycle',
   'prog/engine/kernel',
   'prog/engine/memory',
+  'prog/engine/baseUtil',
   'prog/engine/coreUtil',
   'prog/engine/math',
   'prog/engine/anim',
