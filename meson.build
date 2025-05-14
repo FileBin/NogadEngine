@@ -13,11 +13,12 @@ subprojects = [
   'prog/engine/sharedInclude',
   'prog/dagorUtils/regExp',
   'prog/1stPartyLibs/dag',
+  'prog/engine/startup',
   'prog/engine/kernel',
   'prog/engine/memory',
   'prog/engine/math',
-  'prog/engine/osApiWrappers',
   'prog/engine/anim',
+  'prog/engine/osApiWrappers',
 ]
 
 foreach sp : subprojects

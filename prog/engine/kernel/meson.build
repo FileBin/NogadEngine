@@ -14,7 +14,6 @@ sources = [
 ]
 
 system = host_machine.system()
-cpu_family = host_machine.cpu_family()
 sanitize = get_option('sanitize').enabled()
 
 if system in ['windows', 'darwin', 'linux']
