@@ -15,6 +15,7 @@ subprojects = [
   'prog/1stPartyLibs/dag',
   'prog/engine/startup',
   'prog/engine/workCycle',
+  'prog/engine/scene',
   'prog/engine/kernel',
   'prog/engine/ioSys',
   'prog/engine/memory',
