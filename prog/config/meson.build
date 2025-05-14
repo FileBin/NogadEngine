@@ -25,15 +25,18 @@ int main() {
 
 # Проверяем поддержку инструкций
 sse_levels = [
-  {'name': 'avx', 'flag': '-mavx', 'def': '4'},
-  {'name': 'sse4.2', 'flag': '-msse4.2', 'def': '4'},
-  {'name': 'sse3', 'flag': '-msse3', 'def': '3'},
-  {'name': 'sse2', 'flag': '-msse2', 'def': '2'}
+  {'name': 'avx512', 'level': 7, 'flag': '-mavx', 'def': '4'},
+  {'name': 'avx2', 'level': 6, 'flag': '-mavx', 'def': '4'},
+  {'name': 'avx', 'level': 5, 'flag': '-mavx', 'def': '4'},
+  {'name': 'sse4.2', 'level': 4, 'flag': '-msse4.2', 'def': '4'},
+  {'name': 'sse3', 'level': 3, 'flag': '-msse3', 'def': '3'},
+  {'name': 'sse2', 'level': 2, 'flag': '-msse2', 'def': '2'}
 ]
 
 # Автовыбор максимальной поддержки
 foreach level : sse_levels
   if compiler.links(determine_sse_version, args: level['flag'], name: 'Check ' + level['name'])
+    sse_level = level['level']
     sse_flag = level['flag']
     sse_def = level['def']
     break
@@ -42,6 +45,7 @@ endforeach
 
 # Фолбэк на базовый SSE2 если ничего не найдено
 if not is_variable('sse_flag')
+  sse_level = 2
   sse_flag = '-msse2'
   sse_def = '2'
 endif

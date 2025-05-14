@@ -17,3 +17,7 @@ lzma_pkg = dependency('LZMA-SDK')
 blake3_pkg = dependency('libblake3')
 freetype_pkg = dependency('freetype2')
 harfbuzz_pkg = dependency('harfbuzz')
+
+libjpeg_pkg = dependency('libjpeg')
+libpng_pkg = dependency('libpng')
+libtiff_pkg = dependency('libtiff-4')

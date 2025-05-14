@@ -20,6 +20,7 @@ subprojects = [
   'prog/engine/sceneRay',
   'prog/engine/kernel',
   'prog/engine/ioSys',
+  'prog/engine/lib3d',
   'prog/engine/memory',
   'prog/engine/guiBase',
   'prog/engine/baseUtil',

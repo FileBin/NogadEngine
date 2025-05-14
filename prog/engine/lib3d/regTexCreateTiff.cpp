@@ -8,7 +8,7 @@
 #include <3d/dag_texMgr.h>
 #include <osApiWrappers/dag_localConv.h>
 #include <debug/dag_debug.h>
-#include <image/tiff-4.4.0/tiffio.h>
+#include <tiffio.h>
 #include <util/dag_texMetaData.h>
 
 

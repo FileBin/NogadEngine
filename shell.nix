@@ -44,6 +44,10 @@ mkShell rec {
     md5
     libblake3
 
+    libtiff
+    libpng
+    libjpeg
+
     SDL2
     freetype
     harfbuzz
@@ -88,6 +92,12 @@ mkShell rec {
           publisher = "eguskov";
           version = "0.1.20";
           hash = "sha256-fo/lGiUujGiHClp1Q+fM8MuuRQJp5mte9riFH7D0EvU=";
+        }
+        {
+          name = "dagor-shader-language-support";
+          publisher = "gaijin";
+          version = "1.9.0";
+          hash = "sha256-WVOUuiNK0g1Qh6AnJDkgSoY9M5UIvhj+7VP0Ni945rQ=";
         }
       ];
     })
