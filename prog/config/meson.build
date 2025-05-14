@@ -25,8 +25,6 @@ int main() {
 
 # Проверяем поддержку инструкций
 sse_levels = [
-  {'name': 'avx512', 'flag': '-mavx512f', 'def': '4'},
-  {'name': 'avx2', 'flag': '-mavx2', 'def': '4'},
   {'name': 'avx', 'flag': '-mavx', 'def': '4'},
   {'name': 'sse4.2', 'flag': '-msse4.2', 'def': '4'},
   {'name': 'sse3', 'flag': '-msse3', 'def': '3'},
@@ -43,7 +41,7 @@ foreach level : sse_levels
 endforeach
 
 # Фолбэк на базовый SSE2 если ничего не найдено
-if not is_variable('sse_version')
+if not is_variable('sse_flag')
   sse_flag = '-msse2'
   sse_def = '2'
 endif

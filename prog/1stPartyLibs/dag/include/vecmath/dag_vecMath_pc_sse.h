@@ -33,9 +33,6 @@
 #if defined(__FMA__) || defined(__AVX__) || defined(__AVX2__)
 #include <immintrin.h>
 #endif
-#if (defined(__FMA__) || defined(__AVX2__)) && defined(__GNUC__)
-#include <fmaintrin.h>
-#endif
 
 #ifdef _MSC_VER
   #pragma warning(push)
