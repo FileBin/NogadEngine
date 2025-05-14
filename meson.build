@@ -14,6 +14,7 @@ subprojects = [
   'prog/dagorUtils/regExp',
   'prog/1stPartyLibs/dag',
   'prog/engine/startup',
+  'prog/engine/workCycle',
   'prog/engine/kernel',
   'prog/engine/memory',
   'prog/engine/math',
