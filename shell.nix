@@ -2,7 +2,6 @@ with (import <nixpkgs> { });
 let
   acl = pkgs.callPackage ./packages/nfrechette-acl.nix { };
   rtm = pkgs.callPackage ./packages/nfrechette-rtm.nix { };
-  regexp = pkgs.callPackage ./packages/regexp.nix { };
   EASTL = pkgs.callPackage ./packages/eastl.nix { };
   mumhash = pkgs.callPackage ./packages/hash/mumhash.nix { };
   murmurhash = pkgs.callPackage ./packages/hash/murmurhash.nix { };
@@ -37,7 +36,6 @@ mkShell rec {
     # 3rd-party libs
     acl
     rtm
-    regexp
     EASTL
     mumhash
     murmurhash

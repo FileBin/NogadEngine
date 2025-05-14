@@ -3,5 +3,8 @@ option('use_rtti', type : 'boolean', value : true)
 option('use_stack_protection', type : 'boolean', value : true)
 option('debug_level', type : 'integer', value : 1)
 option('memory_debug_level', type : 'string', value : 'def')
+
+option('sanitize', type : 'feature', value : 'disabled')
+
 option('dagoranim_measure_perf', type: 'feature', value: 'disabled')
 option('dagoranim_measure_perf_frames', type: 'integer', value: 1000)
