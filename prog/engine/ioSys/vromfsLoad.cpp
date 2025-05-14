@@ -8,8 +8,8 @@
 #include <ioSys/dag_zstdIo.h>
 #include <../ioSys/dataBlock/blk_shared.h>
 #include <generic/dag_tab.h>
-#include <hash/md5.h>
-#include <hash/BLAKE3/blake3.h>
+#include <md5/md5.h>
+#include <blake3.h>
 #include <util/dag_globDef.h>
 #include <util/dag_strUtil.h>
 #include <debug/dag_debug.h>

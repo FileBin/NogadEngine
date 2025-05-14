@@ -89,7 +89,9 @@ inline int ZlibLoadCB::tryReadImpl(void *ptr, int size)
   zs->avail_out = size;
   zs->next_out = (Bytef *)ptr;
 
-  int res = inflateEx(zs, Z_SYNC_FLUSH, (in_fetch_func)fetchInput, this);
+  int res = inflate(zs, Z_SYNC_FLUSH);
+
+//   int res = inflateEx(zs, Z_SYNC_FLUSH, (in_fetch_func)fetchInput, this);
 
   if (res != Z_OK && res != Z_STREAM_END)
   {

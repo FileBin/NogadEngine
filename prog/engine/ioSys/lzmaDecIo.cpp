@@ -1,7 +1,7 @@
 // Copyright (C) Gaijin Games KFT.  All rights reserved.
 
 #include <ioSys/dag_lzmaIo.h>
-#include <arc/lzma-9.20/LzmaDec.h>
+#include <lzma-sdk/LzmaDec.h>
 
 static void *SzAlloc(void *, size_t size) { return memalloc(size, tmpmem); }
 static void SzFree(void *, void *address) { memfree(address, tmpmem); }

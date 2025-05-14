@@ -10,3 +10,8 @@ stl_pkg = dependency('eastl')
 mumhash_pkg = dependency('mumhash')
 wyhash_pkg = dependency('wyhash')
 md5_pkg = dependency('md5')
+
+zlib_pkg = dependency('zlib-ng')
+zstd_pkg = dependency('libzstd')
+lzma_pkg = dependency('LZMA-SDK')
+blake3_pkg = dependency('libblake3')

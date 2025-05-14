@@ -8,7 +8,20 @@
 #if !defined(USE_ZLIB_VER)
 #include <zlib.h>
 #elif USE_ZLIB_VER == 0xFF0000
-#include <arc/zlib-ng/zlib.h>
+// #include <arc/zlib-ng/zlib.h>
+#include <zlib-ng.h>
+
+typedef zng_stream z_stream;
+
+#define inflate zng_inflate
+#define deflate zng_deflate
+#define deflateInit zng_deflateInit
+#define deflateInit2 zng_deflateInit2
+#define deflateEnd zng_deflateEnd
+#define inflateInit zng_inflateInit
+#define inflateInit2 zng_inflateInit2
+#define inflateEnd zng_inflateEnd
+
 #endif
 
 class ZLibPacker

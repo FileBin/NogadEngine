@@ -1,5 +1,6 @@
 with (import <nixpkgs> { });
 let
+  lzma_sdk = pkgs.callPackage ./packages/lzma-sdk.nix { };
   acl = pkgs.callPackage ./packages/nfrechette-acl.nix { };
   rtm = pkgs.callPackage ./packages/nfrechette-rtm.nix { };
   EASTL = pkgs.callPackage ./packages/eastl.nix { };
@@ -24,12 +25,10 @@ mkShell rec {
     pulseaudioFull
     alsa-oss
     nasm
-    zlib
     vulkan-loader
     jq
     meson
     mesonlsp
-    SDL2
     ninja
     cmake
     pkg-config
@@ -38,10 +37,18 @@ mkShell rec {
     acl
     rtm
     EASTL
+
     mumhash
     murmurhash
     wyhash
     md5
+    libblake3
+
+    SDL2
+    
+    zlib-ng
+    zstd
+    lzma_sdk
   ];
 
   packages = [

@@ -7,7 +7,7 @@
 #define ZSTD_STATIC_LINKING_ONLY  1
 #define ZDICT_STATIC_LINKING_ONLY 1
 #include <zstd.h>
-#include <dictBuilder/zdict.h>
+#include <zdict.h>
 #include <memory/dag_framemem.h>
 #include <generic/dag_smallTab.h>
 #include <generic/dag_span.h>
