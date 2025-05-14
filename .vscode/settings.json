@@ -20,5 +20,6 @@
     "files.associations": {
         "*jamfile*": "makefile",
         "*.jam": "makefile",
-    }
+    },
+    "terminal.integrated.scrollback": 10000
 }

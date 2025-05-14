@@ -45,6 +45,8 @@ mkShell rec {
     libblake3
 
     SDL2
+    freetype
+    harfbuzz
     
     zlib-ng
     zstd

@@ -131,12 +131,12 @@ else
     cpp_flags += '-fno-stack-protector'
 endif
 
-add_global_arguments(common_flags + cpp_flags, language: 'cpp')
-add_global_arguments(common_flags, language: 'c')
+add_project_arguments(common_flags, language: 'cpp')
+add_project_arguments(common_flags, language: 'c')
 
 static_library_flags = [
   '-D_TARGET_STATIC_LIB=1',
-]
+] + cpp_flags
 
 engine_library_flags = static_library_flags + [ '-D__B_KERNEL_LIB' ]
 
